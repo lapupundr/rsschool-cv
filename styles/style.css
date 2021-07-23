@@ -1,9 +1,25 @@
 .main-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
+h1,
+h2,
+main,
+div,
+pre,
+ul,
 p {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer {
+    display: block;
+    margin: 20px auto;
+}
+
+img {
+    display: inherit;
+    margin: inherit;
 }
