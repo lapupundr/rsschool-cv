@@ -24,11 +24,15 @@ header {
 
 footer {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
 
+footer time {
+    padding: 0 100px;
+}
 
 header img {
     margin: 20px;
