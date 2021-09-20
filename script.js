@@ -4,14 +4,14 @@ document.getElementById("menu-small").addEventListener('click', () => {
     menuBig.classList.toggle("show")
 })
 
-menuBig.addEventListener('click', () => {menuBig.classList.toggle("show")});
+menuBig.addEventListener('click', () => {menuBig.classList.remove("show")});
 
 console.log (`Ваша оценка - 150 баллов 
     Отзыв по пунктам ТЗ:
     Не выполненные/не засчитанные пункты:
     1) есть видеорезюме автора CV на английском языке. Видеорезюме встраивается в страницу CV как видео, а не в виде кнопки или ссылки. Продолжительность видео 3-5 минут (±15 секунд). В описание видео на YouTube добавлена ссылка на его транскрипцию на английском языке (например, в документе Google Docs). 
     
-    
+
     Выполненные пункты:
     1) вёрстка валидная. Проверить валидность вёрстки: https://validator.w3.org/ 
     feedback: +10
