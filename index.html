@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/rainbow.min.css"> -->
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/foundation.min.css"> -->
@@ -17,14 +19,20 @@
 </head>
 <body >
     <nav>
-        <ul class="container-center navigation">
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#code">Code examples</a></li>
-            <li><a href="#work">Work experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#english">English</a></li>
-        </ul>
+        <div class="menu-big" id="menu-big">
+            <ul class="container-center navigation menu-big-mobile">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#code">Code examples</a></li>
+                <li><a href="#work">Work experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#english">English</a></li>
+            </ul>
+        </div>
+        <div class="menu-small" id="menu-small">
+                <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
 
@@ -36,9 +44,9 @@
                     <img src="images/avatar.jpg" alt="Photo Tanya">
                 </div>
                 <div class="main-information">
-                    <h1 class="type-text">Tanya <br>Zatonets</h1>
+                    <h1>Tanya <br>Zatonets</h1>
                     <h3>Contacts:</h3>
-                    <ul>
+                    <ul class="ul-dot">
                         <li>phone: +375-29-680-66-72</li>
                         <li>e-mail: koshka.tan@gmail.com</li>
                         <li>telegram: @tatsiana_zatonets</li>
@@ -76,14 +84,25 @@
                 <h2>Projects</h2>
                 <a href="https://rolling-scopes-school.github.io/lapupundr-JSFEPRESCHOOL/museum/" target="_blank">
                     <img src="images/museum.jpg" alt="Open project museum">
-                    <div>
+                    <div class="description-abs mobile-text">
                         <h3>Museum</h3>
-                        <p>HTML, CSS</p>
+                        <p class="bright">HTML, CSS</p>
                         <p>The task was to design the Louvre landing page.
                             Valid semantic layout with easily readable code.
                             Exported styles and graphics from Figma and developed "pixel perfect" layout.
                             Used flexbox to build grids.
-                            Styled of interactive interface elements (buttons, links, radio buttons)</p>
+                            Styled interactive interface elements (buttons, links, radio buttons)</p>
+                    </div>
+                </a>
+                <a href="https://rolling-scopes-school.github.io/lapupundr-JSFEPRESCHOOL/custom-video-player/" target="_blank">
+                    <img src="images/video.png" alt="Open project video player">
+                    <div class="description-abs mobile-text">
+                        <h3>Custom video player</h3>
+                        <p class="bright">HTML, CSS, JS</p>
+                        <p>The task was to develop custom video player with following functionality:
+                            fullscreen mode, play/pause, playback rate, managing volume, rewind back/ forward with buttons
+                            and keyboard. 
+                        </p>
                     </div>
                 </a>
             </section>
@@ -93,26 +112,26 @@
                 <div>From Codewars: <a href="https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991" target="_blank">Reverse or rotate?</a></div>
                 <p><i>javascript:</i></p>
                 <pre><code class="language-javascript">
-                    function revrot(str, sz) {
+    function revrot(str, sz) {
 
-                        if (str.length < sz || sz <= 0) {
-                        return "";
-                      }
-                    
-                      function checkInt(nmb) {
-                        let sumCube = [...nmb].reduce((sum, elem) => sum + elem**3, 0);
-                        return (sumCube % 2 === 0) ? true : false;
-                      }
-                    
-                      let reg = new RegExp(`.{${sz}}`, "g");
-                    
-                      return str.match(reg)
-                      .map(item => {
-                        return (checkInt(item)) 
-                        ? item.split('').reverse().join('')
-                        : `${item.slice(1)}${item[0]}`;
-                      }).join('');
-                    }
+        if (str.length < sz || sz <= 0) {
+        return "";
+        }
+    
+        function checkInt(nmb) {
+        let sumCube = [...nmb].reduce((sum, elem) => sum + elem**3, 0);
+        return (sumCube % 2 === 0) ? true : false;
+        }
+    
+        let reg = new RegExp(`.{${sz}}`, "g");
+    
+        return str.match(reg)
+        .map(item => {
+        return (checkInt(item)) 
+        ? item.split('').reverse().join('')
+        : `${item.slice(1)}${item[0]}`;
+        }).join('');
+    }
                 </code></pre>
 
             </section>
@@ -150,14 +169,10 @@
         <time>2021</time>
         <a href="https://rs.school/js/">
             <img src="images/logo-rsschool3.png" width="139" height="50" alt="Logo rsschool">
-            <div>
-                <h3>Museum</h3>
-                <p></p>
-            </div>
         </a>
         
 
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
