@@ -5,26 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/rainbow.min.css"> -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/foundation.min.css"> -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/solar-flare-light.min.css"> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/papercolor-light.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script> 
+
     <title>CV Tatsiana Zatonets</title>
 </head>
-<body>
-    <main>
-        <article>
+<body >
+    <nav>
+        <div class="menu-big" id="menu-big">
+            <ul class="container-center navigation menu-big-mobile">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#code">Code examples</a></li>
+                <li><a href="#work">Work experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#english">English</a></li>
+            </ul>
+        </div>
+        <div class="menu-small" id="menu-small">
+                <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <main >
+        
             <header>
-                <img src="images/avatar.jpg" width="300" height="300" alt="Photo Tatsiana">
+                <div class="container-wrap container-center">
+                <div class="header-img">
+                    <img src="images/avatar.jpg" alt="Photo Tanya">
+                </div>
                 <div class="main-information">
-                    <h1>Tatsiana Zatonets</h1>
-                    <h2>Contacts:</h2>
-                    <ul>
+                    <h1>Tanya <br>Zatonets</h1>
+                    <h3>Contacts:</h3>
+                    <ul class="ul-dot">
                         <li>phone: +375-29-680-66-72</li>
                         <li>e-mail: koshka.tan@gmail.com</li>
                         <li>telegram: @tatsiana_zatonets</li>
                     </ul>
                 </div>
+                </div>
             </header>
 
-            <section class="block-center">
-                <h2>About</h2>
+        <article class="container-center">
+
+            <section id="about">
+                <h2>About me</h2>
                 <p>I am communicative, optimistic, good team worker, I learn quickly and want to learn. I am studying English. 
                 
                 Now I am a full day photographer of developing lingerie brand. I have learned everything by myself (photo shooting, retouch), visited masterclasses of pro-photographers and assisted them.
@@ -35,56 +69,103 @@
                 </p>
             </section>
 
-            <section class="block-center">
+            <section id="skills">
                 <h2>Skills</h2>
                 <ul>
+                    <li>Photoshop</li>
                     <li>HTML</li>
                     <li>CSS</li>
+                    <li>JavaScript (studying)</li>
                     <li>Small SQL experience</li>
                 </ul>
-                <p>Now studying at RSSchool</p>
             </section>
 
-            <section class="block-center">
+            <section class="project" id="projects">
+                <h2>Projects</h2>
+                <a href="https://rolling-scopes-school.github.io/lapupundr-JSFEPRESCHOOL/museum/" target="_blank">
+                    <img src="images/museum.jpg" alt="Open project museum">
+                    <div class="description-abs mobile-text">
+                        <h3>Museum</h3>
+                        <p class="bright">HTML, CSS</p>
+                        <p>The task was to design the Louvre landing page.
+                            Valid semantic layout with easily readable code.
+                            Exported styles and graphics from Figma and developed "pixel perfect" layout.
+                            Used flexbox to build grids.
+                            Styled interactive interface elements (buttons, links, radio buttons)</p>
+                    </div>
+                </a>
+                <a href="https://rolling-scopes-school.github.io/lapupundr-JSFEPRESCHOOL/custom-video-player/" target="_blank">
+                    <img src="images/video.png" alt="Open project video player">
+                    <div class="description-abs mobile-text">
+                        <h3>Custom video player</h3>
+                        <p class="bright">HTML, CSS, JS</p>
+                        <p>The task was to develop custom video player with following functionality:
+                            fullscreen mode, play/pause, playback rate, managing volume, rewind back/ forward with buttons
+                            and keyboard. 
+                        </p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="code">
                 <h2>Code examples</h2>
+                <div>From Codewars: <a href="https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991" target="_blank">Reverse or rotate?</a></div>
                 <p><i>javascript:</i></p>
-                <pre>
-                function ucFirst(str) {
-                if (!str) return str;
+                <pre><code class="language-javascript">
+    function revrot(str, sz) {
 
-                return str[0].toUpperCase() + str.slice(1);
-                }
+        if (str.length < sz || sz <= 0) {
+        return "";
+        }
+    
+        function checkInt(nmb) {
+        let sumCube = [...nmb].reduce((sum, elem) => sum + elem**3, 0);
+        return (sumCube % 2 === 0) ? true : false;
+        }
+    
+        let reg = new RegExp(`.{${sz}}`, "g");
+    
+        return str.match(reg)
+        .map(item => {
+        return (checkInt(item)) 
+        ? item.split('').reverse().join('')
+        : `${item.slice(1)}${item[0]}`;
+        }).join('');
+    }
+                </code></pre>
 
-                let str1 = prompt ("Input string","hello");
-                alert( ucFirst(str1) );
-                </pre>
             </section>
 
-            <section class="block-center">
+            <section id="work">
                 <h2>Work experience</h2>
                 <ul>
-                    <li>2018-... Photographer</li>
-                    <li>2013-2016 Administration of a small manufacture company - supplies, sales.</li>
-                    <li>2007-2013 Engineering of water supply systems (CAD).</li>
+                    <li>2018 - now Photographer</li>
+                    <li>2013 - 2016 Administration of a small manufacture company - supplies, sales.</li>
+                    <li>2007 - 2013 Engineering of water supply systems (CAD).</li>
                 </ul>
             </section>
 
-            <section class="block-center">
+            <section id="education">
                 <h2>Education</h2>
                 <ul>
-                    <li>2008-2010 BNTU Economics and management in an industrial enterprise* (bachelor)</li>
-                    <li>2003-2008 BNTU FITR *Automated information processing systems* (bachelor)</li>
+                    <li>2021 - now studying at RS School on the course «JavaScript/Front-end»</li>
+                    <li>2008 - 2010 BNTU Economics and management in an industrial enterprise* (bachelor)</li>
+                    <li>2003 - 2008 BNTU FITR *Automated information processing systems* (bachelor)</li>
                 </ul>
             </section>
 
-            <section class="block-center">
-                <h2>English level A2</h2>
+            <section id="english">
+                <h2>English</h2>
+                <div>Pre-intermediate A2</div>
             </section>
         </article>
     </main>
 
     <footer>
-        <a href="https://github.com/lapupundr">My GitHub</a>
+        <a href="https://github.com/lapupundr">
+            <img src="images/github.svg" height="70" alt="">
+        
+        </a>
         <time>2021</time>
         <a href="https://rs.school/js/">
             <img src="images/logo-rsschool3.png" width="139" height="50" alt="Logo rsschool">
@@ -92,5 +173,6 @@
         
 
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
